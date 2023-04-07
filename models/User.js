@@ -42,6 +42,7 @@ User.init(
             beforeCreate: async (newUser) => {
                 try {
                     newUser.password = await bcrypt.hash(newUser.password, 10);
+                    console.log('user created');
                     return newUser;
                 } catch (err) {
                     console.log(err);
@@ -51,6 +52,7 @@ User.init(
             beforeUpdate: async (updatedUser) => {
                 try {
                     updatedUser.password = await bcrypt.hash(updatedUser.password, 10);
+                    console.log('updated');
                     return updatedUser;
                 } catch (err) {
                     console.log(err);

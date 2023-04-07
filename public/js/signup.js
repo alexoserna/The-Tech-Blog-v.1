@@ -1,6 +1,8 @@
 const signupFormHandler = async function(event) {
   event.preventDefault();
 
+  console.log('button clicked');
+
   const usernameEl = document.querySelector('#username-input-signup');
   const passwordEl = document.querySelector('#password-input-signup');
   const emailEL = document.querySelector('#email');
@@ -15,8 +17,6 @@ const signupFormHandler = async function(event) {
     headers: { 'Content-Type': 'application/json' },
   });
 
-  console.log(usernameEl.value + passwordEl.value);
-
   if (response.ok) {
     document.location.replace('/dashboard');
     alert('signedup!');
@@ -27,4 +27,4 @@ const signupFormHandler = async function(event) {
 
 document
   .querySelector('#signup-form')
-  .addEventListener('submit', signupFormHandler);
+  .addEventListener('click', signupFormHandler);

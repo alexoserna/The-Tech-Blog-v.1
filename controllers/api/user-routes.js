@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Comment, Post } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -13,6 +13,7 @@ router.post('/', async (req, res) => {
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.username = newUser.username;
+      req.session.email = newUser.email;
       req.session.loggedIn = true;
 
       res.json(newUser);
@@ -23,6 +24,7 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+
   try {
     const user = await User.findOne({
       where: {
@@ -50,6 +52,7 @@ router.post('/login', async (req, res) => {
       res.json({ user, message: 'You are now logged in!' });
     });
   } catch (err) {
+    console.log('straight to catch');
     res.status(400).json({ message: 'No user account found!' });
   }
 });

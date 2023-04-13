@@ -1,0 +1,27 @@
+<div class="flex-row justify-center">
+    <div class="col-sm-12  col-md-10 col-lg-8 col-xl-6 card">
+        <div class="card-header flex-row justify-space-between">
+            <h2 class="flex-row justify-center">{{post.title}}</h2>
+            <p>Posted by {{post.username}} on {{post.date}}</p>
+        </div>
+        <div class="card-body col-8">
+            <p>{{post.content}}</p>
+        </div>
+    </div>
+
+</div>
+
+{{>new-comment}}
+
+{{#each post.comments as |commentData|}}
+<div class="flex-row justify-center">
+    <div class="col-sm-12  col-md-10 col-lg-8 col-xl-6 card">
+        <div class="card-header flex-row justify-space-between">
+        </div>
+        <div class="card-body col-8">
+            <p>{{commentData.comment}}</p>
+            <p>-{{commentData.username}}, {{commentData.date}}</p>
+        </div>
+    </div>
+</div>
+{{/each}}

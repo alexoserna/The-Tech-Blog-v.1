@@ -4,21 +4,21 @@
             <h2 class="flex-row justify-center">Create New Post</h2>
         </div>
         <div class="card-body col-8">
-            <form id="login-form">
-                <div class="mb-4 input-card p-2">
-                    <label class="form-label pl-2">Title</label>
-                    <input type="text" placeholder="" class="form-control"
-                        id="username-input-login" aria-describedby="emailHelp" />
+            <form>
+                <div>
+                    <label class="form-label">Title</label>
+                    <input name="post-title" type="text" placeholder="" class="form-input"
+                         aria-describedby="post-title" />
                 </div>
-                <div class="mb-4 input-card p-2">
-                    <label class="form-label pl-2">Content</label>
-                    <input type="text" placeholder="" class="form-control"
-                        id="password-input-login" />
+                <div>
+                    <label class="form-label">Content</label>
+                    <textarea name="post-body" rows="2" type="text" class="form-textarea"
+                        id="post-content" ></textarea>
                 </div>
-                <div class="mb-3 form-check">
-                </div>
-                <button class="btn" type="submit" id="Btn">Create</button>
+                <button class="btn" type="submit" id="new-post-form">Create</button>
             </form>
         </div>
     </div>
 </section>
+
+<script src="/js/new.js"></script>

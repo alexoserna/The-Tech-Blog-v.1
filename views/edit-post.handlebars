@@ -1,0 +1,26 @@
+<section class="flex-row justify-center">
+    <div class="col-sm-12  col-md-10 col-lg-8 col-xl-6 card">
+        <div class="card-header">
+            <h2 class="flex-row justify-center">Edit Post</h2>
+        </div>
+        <div class="card-body col-8">
+            <h2 id="post_id">{{posts.post_id}}</h2>
+            <form>
+                <div class="mb-4 input-card p-2">
+                    <label class="form-label pl-2">Title</label>
+                    <input name="post-title" type="text" value="{{posts.title}}" class="form-input"
+                        id="username-input-login" aria-describedby="post-title">
+                </div>
+                <div class="mb-4 input-card p-2">
+                    <label class="form-label pl-2">Content</label>
+                    <textarea name="post-body" rows="2" type="text" class="form-textarea"
+                        id="post-content" >{{posts.content}}</textarea>
+                </div>
+                <button class="btn" type="submit" id="edit-post-form">Update Post</button>
+                <button class="btn" type="submit" id="delete-btn">Delete</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script src="/js/edit.js"></script>

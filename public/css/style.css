@@ -70,6 +70,11 @@ input {
   color: var(--primary);
 }
 
+.card-header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
 .btn {
   font-size: 1.3rem;
   text-decoration: none;
@@ -184,11 +189,40 @@ input {
   padding: 1%;
 }
 
+.dashboard-header {
+  margin: 0 0 20px 0;
+  border: 3px solid var(--light-dark);
+  border-radius: var(--border-radius);
+  background-color: var(--light-dark);
+  padding: 1%;
+}
+
+.dashboard-header a {
+  font-weight: normal;
+  color:var(--primary);
+}
+
+.dashboard-header p {
+  font-size: medium;
+  color: var(--primary);
+  margin: 0;
+}
+
 /* FORM */
 .form-label,
 .form-input,
 .form-textarea {
   display: block;
+}
+
+.form-textarea {
+  resize: none;
+  width: 100%;
+  padding: 1%;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  border: 2px solid var(--light-dark);
+  border-radius: var(--border-radius);
 }
 
 .form-label {
@@ -523,3 +557,23 @@ input {
     flex: 0 0 100%;
   }
 }
+
+/* New Post */
+
+#post-content {
+  height: 70px;
+}
+
+.hidden {
+  display: none;
+}
+
+#post_id {
+  display: none;
+}
+
+#toggle-btn {
+  width: 200px;
+  margin-bottom: 30px;
+}
+

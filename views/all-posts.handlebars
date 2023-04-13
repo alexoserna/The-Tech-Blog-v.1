@@ -1,0 +1,13 @@
+<section class="flex-column justify-center">
+    {{#each posts as |postData| }}
+    <div class="col-sm-12  col-md-10 col-lg-8 col-xl-6 card">
+        <div class="card-header flex-row justify-space-between">
+            <h2><a href="/post/{{postData.post_id}}">{{postData.title}}</a></h2>
+            <p>Posted by {{postData.username}} on {{postData.date}}</p>
+        </div>
+        <div class="card-body col-8">
+            <p>{{postData.content}}</p>
+        </div>
+    </div>
+    {{/each}}
+</section>

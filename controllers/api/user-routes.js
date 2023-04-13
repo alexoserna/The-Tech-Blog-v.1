@@ -3,7 +3,6 @@ const { User, Comment, Post } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    console.log(req.body);
     const newUser = await User.create({
       username: req.body.username,
       email: req.body.email,
@@ -11,7 +10,7 @@ router.post('/', async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.userId = newUser.id;
+      req.session.user_id = newUser.user_id;
       req.session.username = newUser.username;
       req.session.email = newUser.email;
       req.session.loggedIn = true;
